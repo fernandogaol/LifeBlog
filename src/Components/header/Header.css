@@ -1,6 +1,17 @@
 .header {
   margin-top: 60px;
 }
+
+.topBarImage {
+  position: relative;
+  top: 0;
+  left: 10px;
+  cursor: pointer;
+}
+
+.headerImage {
+  margin-top: 20px;
+}
 .headerTitles {
   display: flex;
   flex-direction: column;
@@ -22,6 +33,6 @@
 .headerImg {
   width: 100%;
   height: 450px;
-  margin-top: 50px;
+  margin-top: 30px;
   object-fit: cover;
 }

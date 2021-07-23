@@ -4,23 +4,48 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background: linear-gradient(to right, #6d6bca, #f1eeee); */
   background: linear-gradient(
-      rgba(155, 255, 255, 0.6),
-      rgba(175, 125, 225, 0.3)
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.2)
     ),
-    url("https://wallpaperaccess.com/full/1900851.png");
-  background-position: center;
+    url("https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg");
 }
 
+.loginWrapper {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border: none;
+  border-radius: 10px;
+}
+
+.longTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.longTitleWrapper > img {
+  background-color: white;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.loginImg {
+  display: flex;
+  align-self: center;
+  text-align: center;
+}
 .loginTitle {
   font-size: 28px;
   font-family: sans-serif;
+  color: white;
 }
 
 .loginSubTitle {
   font-size: 16px;
   font-family: sans-serif;
-  color: #333;
+  color: white;
+  opacity: 0.8;
   margin-top: 5px;
 }
 
@@ -33,18 +58,22 @@
 
 .loginForm > label {
   margin: 10px 0;
+  color: white;
 }
 
 .loginInput {
   padding: 10px;
-  background: linear-gradient(
-    rgba(225, 255, 255, 0.1),
-    rgba(225, 255, 225, 0.1)
-  );
   border: none;
   outline: none;
+  color: white;
+  background: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid white;
 }
 
+.loginInput::placeholder {
+  color: white;
+  opacity: 0.8;
+}
 .loginButton {
   margin-top: 20px;
   cursor: pointer;
@@ -63,12 +92,18 @@
   position: absolute;
   top: 60px;
   right: 20px;
+  width: 70px;
   background-color: lightcoral;
   cursor: pointer;
   border: none;
   border-radius: 10px;
-  color: #fff;
+  color: inherit;
   padding: 10px;
+}
+
+.loginRegisterButton > a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .loginRegisterButton:hover {

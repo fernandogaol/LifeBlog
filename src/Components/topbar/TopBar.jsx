@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom';
 import "./TopBar.css"
 
 export default function TopBar(){
-    const user = true;
+    const user = false;
     return(
         <div className="topBar">
+            <Link to="/"><img className="topBarImage" src="../favicon-32x32.png" alt="" /></Link>
              <div className="topLeft">
                 <i className="topIcon fab fa-facebook-square"></i>
                 <i className="topIcon fab fa-instagram-square"></i>
@@ -14,7 +15,7 @@ export default function TopBar(){
              <div className="topCenter">
                  <ul className="topList">
                     <li className="topListItem"><Link to="/">HOME</Link></li>
-                    <li className="topListItem"><Link to="">ABOUT</Link></li>
+                    <li className="topListItem"><Link to="/signup">ABOUT</Link></li>
                     <li className="topListItem"><Link>CONTACT</Link></li>
                     <li className="topListItem">{user && "ADD POST"}</li>            
                  </ul>
