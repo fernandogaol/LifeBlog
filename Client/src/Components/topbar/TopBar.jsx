@@ -1,8 +1,15 @@
 import {Link} from 'react-router-dom';
+import {useContext} from 'react';
+import {Context} from '../../context/Context';
 import './TopBar.css';
 
 export default function TopBar() {
-	const user = false;
+	const {user, dispatch} = useContext(Context);
+
+	const handleLogout = () => {
+		dispatch({type: 'LOGOUT'});
+		window.location.replace('/');
+	};
 	return (
 		<div className='topBar'>
 			<Link to='/'>
@@ -22,22 +29,22 @@ export default function TopBar() {
 					<li className='topListItem'>
 						<Link to='/signup'>ABOUT</Link>
 					</li>
-					<li className='topListItem'>
+					{/* <li className='topListItem'>
 						<Link>CONTACT</Link>
+					</li> */}
+					<li className='topListItem'>
+						{user && <Link to='/addpost'>ADD POST</Link>}
 					</li>
-					<li className='topListItem'>{user && 'ADD POST'}</li>
 				</ul>
 			</div>
 
 			<div className='topRight'>
 				{user ? (
 					<>
-						<img
-							className='topImage'
-							src='https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.6435-9/177257487_4053111291446005_6450645541234534589_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=glvB_hqi-boAX_3skG6&_nc_oc=AQlaARnhSejeUQB_MMV5yYDpuGR_aGiidHH6MCftpwCrFdx4OwE9GzhDT9Txlsu0-4FrXKf8aV3UkW2Nvg4qBNEX&tn=wBW-SYjH3uBnfpQN&_nc_ht=scontent.fmkc1-1.fna&oh=a39bef647d1c73ee8a5c001fb0cc128a&oe=60FC2B09'
-							alt=''
-						></img>
-						<li className='logout topListItem'>{user && 'LOGOUT'}</li>
+						<img className='topImage' src={user.profilePic} alt=''></img>
+						<li className='logout topListItem' onClick={handleLogout}>
+							{user && 'LOGOUT'}
+						</li>
 					</>
 				) : (
 					<>

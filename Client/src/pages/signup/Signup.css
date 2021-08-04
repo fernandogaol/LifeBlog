@@ -1,80 +1,84 @@
 .signup {
-  height: calc(100vh - 50px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://i.pinimg.com/originals/00/16/2e/00162e1098a874cd8db2d63df1b83202.jpg");
-  background-position: center;
+	height: calc(100vh - 50px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(
+			rgba(255, 255, 255, 0.6),
+			rgba(255, 255, 255, 0.5)
+		),
+		url('https://i.pinimg.com/originals/00/16/2e/00162e1098a874cd8db2d63df1b83202.jpg');
+	background-position: center;
 }
 
 .signupTitle {
-  font-size: 28px;
-  font-family: sans-serif;
+	font-size: 28px;
+	font-family: sans-serif;
 }
 
 .signupSubTitle {
-  font-size: 16px;
-  font-family: sans-serif;
-  color: #777;
-  margin-top: 5px;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #777;
+	margin-top: 5px;
 }
 
 .signupForm {
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .signupForm > label {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 
 .signupInput {
-  padding: 10px;
-  background-color: rgb(250, 252, 252);
-  border: none;
-  border-bottom: 1px solid lightgrey;
-  outline: none;
+	padding: 10px;
+	background-color: rgb(250, 252, 252);
+	border: none;
+	border-bottom: 1px solid lightgrey;
+	outline: none;
 }
 
 .signupButton {
-  margin-top: 20px;
-  cursor: pointer;
-  background-color: teal;
-  border: none;
-  color: white;
-  border-radius: 10px;
-  padding: 10px;
+	margin-top: 20px;
+	cursor: pointer;
+	background-color: teal;
+	border: none;
+	color: white;
+	border-radius: 10px;
+	padding: 10px;
 }
 
 .signupButton:hover {
-  background-color: rgb(31, 146, 146);
+	background-color: rgb(31, 146, 146);
 }
 
 .signupLoginButton {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  width: 70px;
-  background-color: lightcoral;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  padding: 10px;
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	width: 70px;
+	background-color: lightcoral;
+	cursor: pointer;
+	border: none;
+	border-radius: 10px;
+	color: #fff;
+	padding: 10px;
 }
 
 .signupLoginButton > a {
-  text-decoration: none;
-  color: #fff;
+	text-decoration: none;
+	color: #fff;
 }
 
 .signupLoginButton:hover {
-  background-color: rgb(250, 143, 143);
+	background-color: rgb(250, 143, 143);
+}
+
+.errorSpan {
+	color: red;
 }

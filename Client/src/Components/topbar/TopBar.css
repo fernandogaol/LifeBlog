@@ -9,6 +9,7 @@
 	display: flex;
 	align-items: center;
 	font-family: 'Josefin Sans', sans-serif;
+	scroll-snap-type: mandatory;
 }
 
 .topLeft,
